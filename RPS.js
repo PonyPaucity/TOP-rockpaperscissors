@@ -48,12 +48,24 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-function game() {
-    for (let i = 0; playerScore < 5 && computerScore < 5; i++) {
-        playerSelection = window.prompt("RPS");
-        let computerSelection = computerPlay();
-        console.log(playRound(playerSelection, computerSelection))
-    }
-}
+// function game() {
+//     for (let i = 0; playerScore < 5 && computerScore < 5; i++) {
+//         playerSelection = window.prompt("RPS");
+//         let computerSelection = computerPlay();
+//         console.log(playRound(playerSelection, computerSelection));
+//     }
+// }
 
-game()
+const playRock = document.querySelector('#playRock');
+const playPaper = document.querySelector('#playPaper');
+const playScissors = document.querySelector('#playScissors');
+
+const buttons = document.querySelectorAll('button');
+buttons.forEach((button) => {
+    button.addEventListener(
+        'click', () => {
+            let computerSelection = computerPlay()
+            console.log(playRound(button.id, computerSelection))
+        }
+    )
+})
