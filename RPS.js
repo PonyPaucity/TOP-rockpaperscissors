@@ -50,15 +50,25 @@ function playRound(playerSelection, computerSelection) {
 
 // RPS buttons
 const buttons = document.querySelectorAll('button');
+const rpsResult = document.querySelector('#rpsResult');
+const runningScore = document.querySelector('#runningScore');
+
 buttons.forEach((button) => {
     button.addEventListener(
         'click', () => {
             let computerSelection = computerPlay()
-            console.log(playRound(button.id, computerSelection))
+            let gameResult = playRound(button.id, computerSelection)
+            console.log(gameResult)
+            rpsResult.textContent = String(gameResult)
+            runningScore.textContent = `Score: ${playerScore}:${computerScore}`
+            if (computerScore === 5) {
+                
+                rpsResult.textContent = 'Oh no! Computer Wins!';
+                playerScore = 0, computerScore = 0;
+            } else if (playerScore === 5) {
+                rpsResult.textContent = 'Congratulations! You Win!';
+                playerScore = 0, computerScore = 0;
+            }
         }
     )
 })
-
-const display = document.createElement('div');
-display.classList.add('display')
-display.textContent = ''
