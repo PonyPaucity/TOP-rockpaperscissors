@@ -48,27 +48,48 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
+function replayRound() {
+    rpsButtonGroup.remove();
+    body.prepend(replayButton);
+    replayButton.classList.add('replayButton');
+
+    replayButton.addEventListener('click', () => {
+        runningScore.textContent = `Score: ${playerScore = 0}:${computerScore = 0}`
+        rpsResult.textContent = 'Choose a button to start playing! First to 5 wins!'
+        replayButton.remove();
+        body.prepend(rpsButtonGroup);
+    })
+
+}
+
+// RPS UI
+const body = document.body;
+
 // RPS buttons
 const buttons = document.querySelectorAll('button');
 const rpsResult = document.querySelector('#rpsResult');
 const runningScore = document.querySelector('#runningScore');
+
+// Replay button
+const rpsButtonGroup = document.querySelector('.btn');
+const replayButton = document.createElement('button');
+replayButton.textContent = 'Play Again!';
 
 buttons.forEach((button) => {
     button.addEventListener(
         'click', () => {
             let computerSelection = computerPlay()
             let gameResult = playRound(button.id, computerSelection)
-            console.log(gameResult)
             rpsResult.textContent = String(gameResult)
             runningScore.textContent = `Score: ${playerScore}:${computerScore}`
-            if (computerScore === 5) {
-                
+            if (computerScore === 5) {                
                 rpsResult.textContent = 'Oh no! Computer Wins!';
-                playerScore = 0, computerScore = 0;
+                replayRound();
             } else if (playerScore === 5) {
                 rpsResult.textContent = 'Congratulations! You Win!';
-                playerScore = 0, computerScore = 0;
+                replayRound();
             }
         }
     )
 })
+
