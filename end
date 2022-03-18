@@ -1,0 +1,56 @@
+[33mcommit 3594121851ecafedfddfb125f5e4c2586b8bbccc[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/rps-ui[m[33m, [m[1;32mrps-ui[m[33m)[m
+Author: NaviXPS <darkbloomvivian61@gmail.com>
+Date:   Thu Mar 17 17:15:36 2022 +0800
+
+    added replay round function
+    
+    DOM manipulation
+    document.prepend()
+
+[33mcommit b04204fc9be2f7ff1d424272cc87818e871083f0[m
+Author: NaviXPS <darkbloomvivian61@gmail.com>
+Date:   Fri Mar 11 17:37:52 2022 +0800
+
+    Adding RPS results display
+
+[33mcommit c061e15b5fff6a9e88b3212c019204b686243e4e[m
+Author: NaviXPS <darkbloomvivian61@gmail.com>
+Date:   Fri Mar 11 16:31:34 2022 +0800
+
+    Update RPS.js
+
+[33mcommit dd86d1c09489b6953c4745c447c93d5219f15622[m
+Author: NaviXPS <darkbloomvivian61@gmail.com>
+Date:   Thu Mar 10 17:45:06 2022 +0800
+
+    buttons added
+
+[33mcommit f008df27ed4ef3cf156f1e87140d0f9d0e00e21e[m[33m ([m[1;31morigin/temp[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: PonyPaucity <ivanang109@gmail.com>
+Date:   Thu Jan 27 13:37:55 2022 +0800
+
+    Added score count for RPS game.
+    
+    Learned that condition 2 for 'for loop' must return false for loop to end
+
+[33mcommit d3627d52f703b05c6eee605609fdfd23b8798012[m
+Author: PonyPaucity <ivanang109@gmail.com>
+Date:   Thu Jan 27 13:25:06 2022 +0800
+
+    added functions for randomising computer's played hand, input for player's hand and actually playing RPS round itself.
+    
+    learned the difference between type equality and strict equality, with debugging
+    
+    can improve on the logic of if/else conditionals
+
+[33mcommit e31a43aa5e2d590a778cc4c73b491aaa2afd55a3[m
+Author: PonyPaucity <88194371+PonyPaucity@users.noreply.github.com>
+Date:   Thu Jan 27 10:30:18 2022 +0800
+
+    Create README.me
+
+[33mcommit 7af8645f09730bd70454d28a9f15e333652f1b70[m
+Author: PonyPaucity <88194371+PonyPaucity@users.noreply.github.com>
+Date:   Thu Jan 27 10:29:20 2022 +0800
+
+    Initial commit
